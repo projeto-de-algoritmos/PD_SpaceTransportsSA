@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'minecraft';
+	src: url('../public/fonts/minecraft_font.ttf') format('ttf');
+}
+
+* {
+  font-family: minecraft;
+}
+
+.title-container {
+  position: relative;
+  padding: 0%;
+  text-align: center;
+  color: white; /* Cor do texto */
+  width: 100%;
+  font-family: 'MinecraftFont';
+}
+
+.description-container {
+  position: relative;
+  background-color: #1a216b; /* Cor de fundo do container de descrição */
+  padding: 20px;
+  margin: 40px;
+  border: 2px solid #000000; /* Borda ao redor do retângulo */
+}
+
+.description {
+	font-size: 90%;
+  color:#ffff;
+}
+
+.input {
+  margin-top: 5px;
+}
+
+.item-container {
+  position: relative;
+	border: 2px solid #6f4206;
+  background-color: white; 
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: no-wrap;
+  row-gap: 0px;
+  align-content: center;
+}
+
+
+.handle-game {
+  position: relative;
+  display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 5%;
+    border: 3px solid #0c720f;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+button {
+  margin: 5%;
+}
+
+.button-container {
+  display: flex
+}

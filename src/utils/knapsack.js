@@ -30,6 +30,9 @@ function knapsack(items, capacity) {
       i--;
     }
   
+    console.log("Max Value:", m[n][capacity])
+    console.log("Selected Items:", selectedItems.reverse())
+
     return {
       maxValue: m[n][capacity],
       selectedItems: selectedItems.reverse(),

@@ -1,0 +1,10 @@
+.item-image {
+	/* Defina o tamanho desejado para as imagens */
+	width: 170px; /* Largura em pixels */
+	height: 170px; /* Altura automática para manter a proporção original */
+  }
+
+.item {
+	font-size: 45%;
+	margin: 1.5%;
+}
