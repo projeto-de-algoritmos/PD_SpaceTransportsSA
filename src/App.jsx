@@ -6,6 +6,11 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import knapsack from "./utils/knapsack";
 
+import SciFiBarrel from "./imgs/SciFiBarrel.png"
+import SciFiCargo from "./imgs/SciFiCargo.png"
+import SciFiContainer1 from "./imgs/SciFiContainer1.png"
+import SciFiContainer2 from "./imgs/SciFiContainer2.png"
+
 function App() {
   const [inputItem, setInputItem] = useState("");
   const [itensValue, setItensValue] = useState([]);
@@ -15,20 +20,19 @@ function App() {
   const [userAnswer, setUserAnswer] = useState([]);
   const [answer, setAnswer] = useState([]);
 
-  const [esmeralda, setEsmeralda] = useState(false);
-  const [lightsaber, setLightsaber] = useState(false);
-  const [enchiridion, setEnchiridion] = useState(false);
-  const [cubo, setCubo] = useState(false);
-  const [materia, setMateria] = useState(false);
   const [plasma, setPlasma] = useState(false);
-  const [portalGun, setPortalGun] = useState(false);
-  const [dragonBall, setDragonBall] = useState(false);
+  const [cristalV, setCristalV] = useState(false);
+  const [cubo, setCubo] = useState(false);
+  const [nucleo, setNucleo] = useState(false);
+  const [fragmento, setFragmento] = useState(false);
+  const [disco, setDisco] = useState(false);
+  const [cristalH, setCristalH] = useState(false);
+  const [amuleto, setAmuleto] = useState(false);
 
   const [showWinAlert, setShowWinAlert] = useState(false);
   const [showLoseAlert, setShowLoseAlert] = useState(false);
   const [showFullAlert, setShowFullAlert] = useState(false);
   const [itemAddedAlert, setItemAddedAlert] = useState(false);
-  const [FullWeightAlert, setFullWeightAlert] = useState(false);
 
   const handleRegister = () => {
     let value = userValue;
@@ -36,76 +40,115 @@ function App() {
     let userArray = userAnswer;
 
     switch (inputItem) {
-      case "esmeralda":
-        if (completed + itensWeight[0] <= 100 && !esmeralda) {
+      case "plasma":
+        if (completed + itensWeight[0] <= 100 && !plasma) {
           completed += itensWeight[0];
           value += itensValue[0];
-          setEsmeralda(true);
+          setPlasma(true);
           userArray.push(inputItem);
+        } else if(plasma) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[0] > 100) {
+          setShowFullAlert(true)
         }
 
         break;
-      case "lightsaber":
-        if (completed + itensWeight[1] <= 100 && !lightsaber) {
+      case "cristalV":
+        if (completed + itensWeight[1] <= 100 && !cristalV) {
           completed += itensWeight[1];
           value += itensValue[1];
-          setLightsaber(true);
+          setCristalV(true);
           userArray.push(inputItem);
+        } else if(cristalV) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[1] > 100) {
+          setShowFullAlert(true)
         }
 
-        break;
-      case "enchiridion":
-        if (completed + itensWeight[2] <= 100 && !enchiridion) {
-          completed += itensWeight[2];
-          value += itensValue[2];
-          setEnchiridion(true);
-          userArray.push(inputItem);
-        }
 
         break;
       case "cubo":
-        if (completed + itensWeight[3] <= 100 && !cubo) {
-          completed += itensWeight[3];
-          value += itensValue[3];
+        if (completed + itensWeight[2] <= 100 && !cubo) {
+          completed += itensWeight[2];
+          value += itensValue[2];
           setCubo(true);
           userArray.push(inputItem);
+        } else if(cubo) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[2] > 100) {
+          setShowFullAlert(true)
         }
 
+
         break;
-      case "materia":
-        if (completed + itensWeight[4] <= 100 && !materia) {
+      case "nucleo":
+        if (completed + itensWeight[3] <= 100 && !nucleo) {
+          completed += itensWeight[3];
+          value += itensValue[3];
+          setNucleo(true);
+          userArray.push(inputItem);
+        }  else if(nucleo) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[3] > 100) {
+          setShowFullAlert(true)
+        }
+
+
+        break;
+      case "fragmento":
+        if (completed + itensWeight[4] <= 100 && !fragmento) {
           completed += itensWeight[4];
           value += itensValue[4];
-          setMateria(true);
+          setFragmento(true);
           userArray.push(inputItem);
+        }  else if(fragmento) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[4] > 100) {
+          setShowFullAlert(true)
         }
 
+
         break;
-      case "plasma":
-        if (completed + itensWeight[5] <= 100 && !plasma) {
+      case "disco":
+        if (completed + itensWeight[5] <= 100 && !disco) {
           completed += itensWeight[5];
           value += itensValue[5];
-          setPlasma(true);
+          setDisco(true);
           userArray.push(inputItem);
+        } else if(disco) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[5] > 100) {
+          setShowFullAlert(true)
         }
 
+
         break;
-      case "portalGun":
-        if (completed + itensWeight[6] <= 100 && !portalGun) {
+      case "cristalH":
+        if (completed + itensWeight[6] <= 100 && !cristalH) {
           completed += itensWeight[6];
           value += itensValue[6];
-          setPortalGun(true);
+          setCristalH(true);
           userArray.push(inputItem);
+        } else if(cristalH) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[6] > 100) {
+          setShowFullAlert(true)
         }
 
+
         break;
-      case "dragonBall":
-        if (completed + itensWeight[7] <= 100 && !dragonBall) {
+      case "amuleto":
+        if (completed + itensWeight[7] <= 100 && !amuleto) {
           completed += itensWeight[7];
           value += itensValue[7];
-          setEsmeralda(true);
+          setPlasma(true);
           userArray.push(inputItem);
+        } else if(amuleto) {
+          setItemAddedAlert(true)
+        } else if(completed + itensWeight[7] > 100) {
+          setShowFullAlert(true)
         }
+
 
         break;
     }
@@ -119,14 +162,14 @@ function App() {
     setProgress(0);
     setUserValue(0);
     setUserAnswer([]);
-    setEsmeralda(false);
-    setLightsaber(false);
-    setEnchiridion(false);
-    setCubo(false);
-    setMateria(false);
     setPlasma(false);
-    setPortalGun(false);
-    setDragonBall(false);
+    setCristalV(false);
+    setCubo(false);
+    setNucleo(false);
+    setFragmento(false);
+    setDisco(false);
+    setCristalH(false);
+    setAmuleto(false);
     setAnswer(knapsack(generateProblem(), 100));
   };
 
@@ -134,14 +177,14 @@ function App() {
     setProgress(0);
     setUserValue(0);
     setUserAnswer([]);
-    setEsmeralda(false);
-    setLightsaber(false);
-    setEnchiridion(false);
-    setCubo(false);
-    setMateria(false);
     setPlasma(false);
-    setPortalGun(false);
-    setDragonBall(false);
+    setCristalV(false);
+    setCubo(false);
+    setNucleo(false);
+    setFragmento(false);
+    setDisco(false);
+    setCristalH(false);
+    setAmuleto(false);
   };
 
   const handleCheck = () => {
@@ -181,14 +224,14 @@ function App() {
     setItensWeight(weight);
 
     let items = [
-      { name: "esmeralda", weight: weight[0], value: value[0] },
-      { name: "lightsaber", weight: weight[1], value: value[1] },
-      { name: "enchiridion", weight: weight[2], value: value[2] },
-      { name: "cubo", weight: weight[3], value: value[3] },
-      { name: "materia", weight: weight[4], value: value[4] },
-      { name: "plasma", weight: weight[5], value: value[5] },
-      { name: "portalGun", weight: weight[6], value: value[6] },
-      { name: "dragonBall", weight: weight[7], value: value[7] },
+      { name: "plasma", weight: weight[0], value: value[0] },
+      { name: "cristalV", weight: weight[1], value: value[1] },
+      { name: "cubo", weight: weight[2], value: value[2] },
+      { name: "nucleo", weight: weight[3], value: value[3] },
+      { name: "fragmento", weight: weight[4], value: value[4] },
+      { name: "disco", weight: weight[5], value: value[5] },
+      { name: "cristalH", weight: weight[6], value: value[6] },
+      { name: "amuleto", weight: weight[7], value: value[7] },
     ];
 
     return items;
@@ -206,21 +249,18 @@ function App() {
     <div id='stars3'></div>
     <div className="main">
       <div className="title-container">
-        <h1>Space Transport S.A</h1>
+        <h1>Space Transport S.A.</h1>
       </div>
 
       <div className="description-container">
-        <div className="description-rectangle">
           <p className="description">
-            Bem-vindo(a) ao Space Transports S.A! um simulador de itens espaciais de forma 
-            a vender esses produtos buscando alcançar um lucro em cima do ganho de moedas espaciais
-            da Space Transport S.A. Utilizamos o Knapsack Problem com Programação Dinâmica
-            para determinar a forma mais lucrativa de obter moedas espaciais com o espaço determinado.
-            Mas queremos que você faça isso sozinho(a)! Escolha os itens que você deseja comprar
-            para caber em sua sacola (knapsack) e vamos mostrar o quanto irá receber por isso,
-            se você alcançar o lucro máximo com os itens e pesos dados, você ganha!
+            Bem-vindo(a) ao Space Transports S.A.! uma empresa de transportes espacias e esta aplicação serve para auxiliar
+            os funcionários a encher as nossas naves de transporte de maneira que transportamos os itens e garantimos o maior lucro.
+            Utilizamos o Knapsack Problem com Programação Dinâmica para determinar a forma mais lucrativa de obter PAX com o espaço disponível na nave.
+            Mas queremos que você faça isso sozinho(a)! Escolha os itens que você deseja colocar na nave,
+            respeitando a capacidade máxima, e vamos mostrar o quanto irá receber por isso,
+            se você alcançar o lucro máximo com os itens, você ganha um aumento!
           </p>
-        </div>
       </div>
 
       <div className="item-container">
@@ -228,49 +268,49 @@ function App() {
           type={"Plasma Sintético de Nebulosa"}
           value={itensValue[0]}
           weight={itensWeight[0]}
-          image="https://i.imgur.com/CXtVjJKt.jpg"
+          image={SciFiBarrel}
         />
         <Item
           type={"Cristal de Vórtice Quântico"}
           value={itensValue[1]}
           weight={itensWeight[1]}
-          image="https://i.imgur.com/5tDEYcMt.jpg"
+          image={SciFiCargo}
         />
         <Item
           type={"Cubo de Antimatéria Anunnaki"}
           value={itensValue[2]}
           weight={itensWeight[2]}
-          image="https://i.imgur.com/D2IN6XTt.jpg"
+          image={SciFiContainer1}
         />
         <Item
           type={"Núcleo de Energia Psíquica Psiloniano"}
           value={itensValue[3]}
           weight={itensWeight[3]}
-          image="https://i.imgur.com/MA7P6hvt.jpg"
+          image={SciFiContainer2}
         />
         <Item
           type={"Fragmento de Lua Errante"}
           value={itensValue[4]}
           weight={itensWeight[4]}
-          image="https://i.imgur.com/CXtVjJKt.jpg"
+          image={SciFiContainer1}
         />
         <Item
           type={"Disco de Gravidade Zero"}
           value={itensValue[5]}
           weight={itensWeight[5]}
-          image="https://i.imgur.com/5tDEYcMt.jpg"
+          image={SciFiContainer2}
         />
         <Item
           type={"Cristal Harmonizador Hiperespacial"}
           value={itensValue[6]}
           weight={itensWeight[6]}
-          image="https://i.imgur.com/D2IN6XTt.jpg"
+          image={SciFiCargo}
         />
         <Item
           type={"Amuleto Gravitacional Grithorian"}
           value={itensValue[7]}
           weight={itensWeight[7]}
-          image="https://i.imgur.com/MA7P6hvt.jpg"
+          image={SciFiBarrel}
         />
       </div>
 
@@ -280,37 +320,37 @@ function App() {
         <p>{progress}%</p>
 
         <div className="selection-container">
-          <label htmlFor="item">Selecione o Item que quer adicionar:</label>
+          <label htmlFor="item"><h3>Selecione o Item que quer adicionar:</h3></label>
           <select
             id="item"
             name="item"
             onChange={(e) => setInputItem(e.target.value)}
           >
-            <option value="esmeralda">Plasma Sintético de Nebulosa</option>
-            <option value="lightsaber">Cristal de Vórtice Quântico</option>
-            <option value="enchiridion">Cubo de Antimatéria Anunnaki</option>
-            <option value="cubo">Núcleo de Energia Psíquica Psiloniano</option>
-            <option value="materia">Fragmento de Lua Errante</option>
-            <option value="plasma">Disco de Gravidade Zero</option>
-            <option value="portalGun">Cristal Harmonizador Hiperespacial</option>
-            <option value="dragonBall">Amuleto Gravitacional Grithorian</option>
+            <option value="plasma">Plasma Sintético de Nebulosa</option>
+            <option value="cristalV">Cristal de Vórtice Quântico</option>
+            <option value="cubo">Cubo de Antimatéria Anunnaki</option>
+            <option value="nucleo">Núcleo de Energia Psíquica Psiloniano</option>
+            <option value="fragmento">Fragmento de Lua Errante</option>
+            <option value="disco">Disco de Gravidade Zero</option>
+            <option value="cristalH">Cristal Harmonizador Hiperespacial</option>
+            <option value="amuleto">Amuleto Gravitacional Grithorian</option>
           </select>
         </div>
 
-        <button onClick={() => handleRegister()}>Escolha a quantidade</button>
+        <button onClick={() => handleRegister()}>Adicionar</button>
 
         <div className="handle-result">
-          <p> Space Coins: {userValue} </p>
+          <p> PAX Coins: {userValue} </p>
           <div className="button-container">
-            <button onClick={() => handleEmpty()}> Esvaziar Mochila </button>
-            <button onClick={() => handleCheck()}> Checar resultado </button>
+            <button onClick={() => handleEmpty()}> Esvaziar a Nave </button>
+            <button onClick={() => handleCheck()}> Verificar Resultado </button>
             <button onClick={() => handleReset()}> Reiniciar </button>
           </div>
 
           {showWinAlert && (
             <Stack sx={{ width: "100%" }} spacing={2}>
               <Alert variant="filled" onClose={() => setShowWinAlert(false)}>
-                Parabéns! Você ganhou{" "}
+                Parabéns! Você ganhou um aumento!{" "}
               </Alert>
             </Stack>
           )}
@@ -322,7 +362,7 @@ function App() {
                 severity="error"
                 onClose={() => setShowLoseAlert(false)}
               >
-                Que pena, você perdeu{" "}
+                Que pena, seu desempenho é mediano{" "}
               </Alert>
             </Stack>
           )}
@@ -335,7 +375,7 @@ function App() {
                 onClose={() => setShowFullAlert(false)}
               >
                 {" "}
-                Passou do limite{" "}
+                Passou da capacidade da nave{" "}
               </Alert>
             </Stack>
           )}
@@ -349,19 +389,6 @@ function App() {
               >
                 {" "}
                 Item já adicionado{" "}
-              </Alert>
-            </Stack>
-          )}
-
-          {FullWeightAlert && (
-            <Stack sx={{ width: "100%" }} spacing={2}>
-              <Alert
-                variant="filled"
-                severity="warning"
-                onClose={() => setFullWeightAlert(false)}
-              >
-                {" "}
-                Peso ultrapassou o disponível{" "}
               </Alert>
             </Stack>
           )}
