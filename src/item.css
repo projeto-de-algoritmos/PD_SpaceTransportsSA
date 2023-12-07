@@ -1,0 +1,19 @@
+.item-image {
+	/* Defina o tamanho desejado para as imagens */
+	width: 95px; /* Largura em pixels */
+	height: 95px; /* Altura automática para manter a proporção original */
+  }
+
+h3 {
+	color: #f0f0f0;
+	text-align: center;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	margin: 1.5%;
+}

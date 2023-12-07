@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+
+* {
+  font-family: "Nova Square", sans-serif;
+}
+
+.title-container {
+  position: relative;
+  padding: 0%;
+  text-align: center;
+  color: #f0f0f0; /* Cor do texto */
+  width: 100%;
+}
+
+.title-container h1 {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: #f0f0f0;
+}
+
+.description-container {
+  position: relative;
+  background: rgb(49, 81, 119);
+  background: linear-gradient(
+    120deg,
+    rgba(49, 81, 119, 1) 10%,
+    rgba(28, 48, 71, 1) 50%,
+    rgba(18, 37, 56, 1) 80%
+  );
+  padding: 20px;
+  margin: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.description {
+  font-size: 90%;
+  color: #f0f0f0;
+}
+
+.input {
+  margin-top: 5px;
+}
+
+.item-container {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  background: rgb(49, 81, 119);
+  background: linear-gradient(
+    120deg,
+    rgba(49, 81, 119, 1) 10%,
+    rgba(28, 48, 71, 1) 50%,
+    rgba(18, 37, 56, 1) 80%
+  );
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: no-wrap;
+  row-gap: 0px;
+  align-content: center;
+}
+
+.handle-game {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-left: 30vw;
+  margin-top: 5vw;
+  padding: 5%;
+  border: none;
+  border-radius: 20px;
+  background: rgb(49, 81, 119);
+  background: linear-gradient(
+    120deg,
+    rgba(49, 81, 119, 1) 10%,
+    rgba(28, 48, 71, 1) 50%,
+    rgba(18, 37, 56, 1) 80%
+  );
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+select {
+  margin-left: 5vw;
+  border: none;
+  color: #f0f0f0;
+  background: #4078b9;
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+}
+
+button {
+  margin-top: 2vh;
+  margin-left: 1vw;
+  border: none;
+  border-radius: 20px;
+  background: #4078b9;
+  height: 6vh;
+  min-width: 8vw;
+  color: #f0f0f0;
+  transition: 0.5s;
+}
+
+button:hover {
+  transition: 0.5s;
+  background: #6ca7ea;
+}
+
+.button-container {
+  display: flex;
+}
