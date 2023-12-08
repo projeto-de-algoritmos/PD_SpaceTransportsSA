@@ -9,13 +9,13 @@
 | 20/2063300  |  João Pedro Rodrigues Morbeck |
 
 ## Sobre 
-O nosso projeto envolve utilizar do algoritmo do Knapsack Problem em um contexto de um mini-jogo onde queremos armazenar itens espaciais e diversos dentro da nossa nave Space Transprt S.A que vai ser a nossa referência equivalente à mochila/sacola que o problema do Knapsack trabalha. 
+O nosso projeto envolve utilizar do algoritmo do Knapsack Problem em um contexto de um mini-jogo onde queremos armazenar itens espaciais e diversos dentro da nossa nave Space Transport S.A que vai ser a nossa referência equivalente à mochila/sacola que o problema do Knapsack trabalha. 
 
 Com isso, desenvolvemos uma aplicação em que é gerado para o usuário um conjunto de 8 itens que ele pode escolher para colocar na nave espacial, sendo que há um limite de ocupação de até 100 de peso para a nave. Assim,  usuário seleciona uma quantia específica de itens para adicionar e ganha uma certa quantidade de PAX Coins, a moeda de valor que esses itens apresentam. 
 
 O desafio é fazer com que o usuário preencha a nave com os itens de forma a obter a maior quantidade  de PAX coins possíveis.
 
-O vídeo de apresentação pode ser encontrado no seguinte link
+O vídeo de apresentação pode ser encontrado no seguinte [link](./video/entrega-pd.zip) ou visto pelo [youtube](https://youtu.be/YgQjS7eRkHY)
 
 ## Screenshots
 
@@ -77,6 +77,3 @@ O usuário pode ter noção da solução ótima ao executar o algoritmo do knaps
 Ao preencher a nave com os itens desejados, o usuário pode apertar o botão "Verificar Resultado" e assim ele obterá um feedback que vai mostrar se ele preencheu a nave com o máximo de valor a se ganhar com os pesos disponíveis, ou seja, se ele ganhou o jogo. Caso iss não tenha ocorrido, então ele recebe um aviso de que não preencheu a nave com a solução ótima e nisso terá perdido o jogo!
 
 Para ele continuar a jogar e tentar, ele pode esvaziar a nave já ocupada para tentar novamente com os mesmos valores e pesos apresentados. Caso contrário, ele pode optar por reiniciar os valores e pesos com o botão "Reiniciar".
-
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
